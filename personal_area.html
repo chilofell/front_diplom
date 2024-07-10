@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="js_lc.js"></script>
+    <title>Personal Area</title>
+</head>
+<body>
+    <div class="heading">
+        <div class="city">
+            <a href="#">
+                <i class='bx bxs-city'></i>
+                <p>City</p>
+            </a>
+        </div>
+        <div>
+            <h1>Light Control</h1>
+        </div>
+        <div class="name">
+            <a href="#">
+                <i class='bx bx-user'></i>
+                <p>Name</p>
+            </a>
+        </div>
+    </div>
+    <div class="devices">
+        <ul class="device-list">
+            <h2>Подключённые устройства</h2>
+            <div class="box-devices">
+                <a href="#" class="device-link">
+                    <div class="device">
+                        <p>Шторы Кухня</p>
+                        <i class='bx bx-shield'></i>
+                    </div>
+            </div>
+        </ul>
+        <div class="add-device">
+            <a href="" class="plus" id="add-device-button"><i class='bx bx-plus-circle'></i></a>
+            <div class="popup" id="add-device">
+                <span class="close">&times;</span>
+                <h2>Добавить новое устройство</h2>
+                <div class="input-box">
+                    <input id="secret_key" type="text" placeholder="Секретный ключ">
+                </div>
+                <div class="input-box">
+                    <input id="name_device" type="text" placeholder="Название">
+                </div>
+                <button class="button">ОК</button>
+            </div>
+        </div>
+        <div id="editor-curtains" class="popup">
+            <span class="close">&times;</span>
+            <div class="control">
+                <h3>Редактор Шторы Кухня</h3>
+                <p id="illumination_level">Уровень освещённости (в %): 60</p>
+                <p id="temperature_level">Уровень температуры (в градусах Цельсия): 22</p>
+                    <button type="submit" class="button" onclick="calibrate()">Калибровка</button>
+                    <button type="submit" class="button" id="close-by-time" onclick="close_by_time()">Закрытие штор по времени</button>
+                    <button type="submit" class="button" id="open-by-time" onclick="open_by_time()">Открытие штор по времени</button>
+                    <button type="submit" class="button" onclick="control_illumination()">Регулировка в зависимости от освещённоси</button>
+                    <button type="submit" class="button" onclick="control_temperature()">Регулировка в зависимости от температуры</button>
+                <div class="slider-container">
+                    <p>Положение шторы:</p><input type="range" class="slider" onclick="value()">
+                </div>
+                <button class="button">Удалить устройство</button>
+            </div>
+        </div>
+        <div id="send-time" class="popup">
+            <span class="close">&times;</span>
+            <h3>Введите время</h3>
+            <div class="input-box">
+                <input type="text" placeholder="HH:MM">
+            </div>
+            <br>
+            <button class="button">ОК</button>
+        </div>
+    </div>
+
+</body>
+</html>

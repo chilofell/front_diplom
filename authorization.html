@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Authorization</title>
+</head>
+<body>
+   <div class="wrapper">
+       <form action="">
+           <h1>Авторизация</h1>
+       <div class="input-box">
+            <input type="text" placeholder="Имя пользователя" required>
+            <i class='bx bx-user'></i>
+       </div>
+        <div class="input-box">
+            <input type="password" placeholder="Пароль" required>
+            <i class='bx bxs-lock-alt'></i>
+       </div>
+       <div class="remember">
+           <label for=""><input type="checkbox">Запомнить меня</label>
+           <a href="">Забыли пароль?</a>
+       </div>
+
+       <button type="submit" class="button" onclick="authorization()">Войти</button>
+
+       <div class="reqister-link">
+           <p>Нет аккаунта? <a href="">Регистрация</a></p>
+       </div>
+       </form>
+       <script src="js_auth.js"></script>
+   </div>
+</body>
+</html>

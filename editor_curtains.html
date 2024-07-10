@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Curtains</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="conditions">
+            <p id="secret_key">Секретный ключ: </p>
+            <p id="illumination_level">Уровень освещённости (в %): </p>
+            <p id="temperature_level">Уровень температуры (в градусах Цельсия): </p>
+        </div>
+        <div class="control">
+            <h3>Настройка автоматизации:</h3>
+                <a href="/calibrate">
+                    <button type="submit" class="button" onclick="calibrate()">Калибровка</button>
+                </a>
+                <a href="/close">
+                    <button type="submit" class="button" onclick="close_by_time()">Закрытие штор по времени</button>
+                </a>
+                <a href="/open">
+                    <button type="submit" class="button" onclick="open_by_time()">Открытие штор по времени</button>
+                </a>
+                <a href="/control_illumination">
+                    <button type="submit" class="button" onclick="contrio_illumination()">Регулировка в зависимости от освещённоси</button>
+                </a>
+                <a href="/control_temperature">
+                    <button type="submit" class="button" onclick="control_temperature()">Регулировка в зависимости от температуры</button>
+                </a>
+        </div>
+        <div class="slider-container">
+            <p>Положение шторы:</p><input type="range" class="slider" onclick="value()">
+        </div>
+
+    </div>
+</body>
+</html>

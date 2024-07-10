@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Registration</title>
+</head>
+<body>
+   <div class="wrapper">
+       <form action="">
+           <h1>Регистрация</h1>
+       <div class="input-box">
+           <p>Введите имя</p>
+            <input type="text" id="name" placeholder="Имя" required>
+       </div>
+       <div class="input-box">
+           <p>Введите адрес электронной почты</p>
+            <input type="text" id="email" placeholder="Адрес электронной почты" required>
+       </div>
+        <div class="input-box">
+            <p>Введите пароль</p>
+            <input type="password" id="password" placeholder="Пароль" required>
+       </div>
+       <div class="input-box">
+            <p>Повторите пароль</p>
+            <input type="password" placeholder="Пароль" required>
+       </div>
+       <div class="subscribe">
+        <label for=""><input type="checkbox">Я ознакомлен(а) с <a href="/politika_konfeditialnosti/">политикой
+            конфиденциальности</a></label>
+        </div>
+
+       <button type="submit" id="submit" class="button" onclick="registration()">Зарегистрироваться</button>
+       </form>
+       <script src="js_reg.js"></script>
+   </div>
+</body>
+</html>
